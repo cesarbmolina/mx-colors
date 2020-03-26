@@ -10,6 +10,7 @@ export class ColorDetailsComponent implements OnInit {
   @Input() public year: string;
   @Input() public color: string;
   @Input() public pantoneValue: string;
+  public isCopied: boolean;
 
   constructor() { }
 
@@ -24,11 +25,15 @@ export class ColorDetailsComponent implements OnInit {
   }
 
   private selectcolor(node: any) {
+    this.isCopied = true;
     const range = document.createRange();
     range.selectNodeContents(node);
     const select = window.getSelection();
     select.removeAllRanges();
     select.addRange(range);
+    setTimeout(() => {
+      this.isCopied = false;
+    }, 2000);
   }
 
 }
