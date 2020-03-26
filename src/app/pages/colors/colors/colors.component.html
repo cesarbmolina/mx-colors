@@ -1,1 +1,29 @@
-<p>colors works!</p>
+<div class="d-flex flex-wrap">
+  <div class="border p-2 w-25" *ngFor="let color of arrayColors; let i = index">
+    <div>
+      {{ color.id }}
+    </div>
+    <div>
+      {{ color.name }}
+    </div>
+    <div>
+      {{ color.year }}
+    </div>
+    <div>
+      {{ color.color }}
+    </div>
+    <div>
+      {{ color.pantone_value }}
+    </div>
+  </div>
+</div>
+<div class="d-flex justify-content-between">
+  <button 
+    (click)="prevPage()" 
+    [disabled]="page === 1">ANTERIOR
+  </button>
+  <button 
+    (click)="nextPage()" 
+    [disabled]="isTotalPages">SIGUIENTE
+  </button>
+</div>

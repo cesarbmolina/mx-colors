@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
 // COMPONENTS
@@ -13,7 +14,9 @@ const routes: Routes = [{ path: '', component: ColorsComponent }];
 @NgModule({
   declarations: [ColorsComponent],
   imports: [
-    RouterModule.forChild(routes)
-  ]
+    RouterModule.forChild(routes),
+    CommonModule
+  ],
+  providers: []
 })
 export class ColorsModule { }
