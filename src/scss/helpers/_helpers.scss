@@ -1,0 +1,14 @@
+.loading {
+  animation: 2s rotate linear infinite;
+  display: flex;
+  color: #ccc;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

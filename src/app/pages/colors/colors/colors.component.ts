@@ -13,6 +13,7 @@ export class ColorsComponent implements OnInit, OnDestroy {
   public totalPages: number;
   public page: number;
   public isTotalPages: boolean;
+  public isLoading: boolean;
   private getColors: any;
 
   constructor(private colorsApi: ColorServices) { }
@@ -45,11 +46,13 @@ export class ColorsComponent implements OnInit, OnDestroy {
    * @param page [number]
    */
   getDataColors(page?: number) {
+    this.isLoading = true;
     this.getColors = this.colorsApi.getColors(page).subscribe(res => {
       this.arrayColors = res.data;
       this.totalPages = res.total_pages;
       this.page = res.page;
       this.isTotalPages = this.page === this.totalPages;
+      this.isLoading = false;
     });
   }
 

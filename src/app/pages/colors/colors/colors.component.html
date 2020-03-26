@@ -2,6 +2,9 @@
   <div class="title-section d-flex justify-content-between">
     <h3 class="title-3">Colores</h3>
     <div class="d-flex align-items-center">
+      <div class="loading" *ngIf="isLoading">
+        <i class="icon-loop2"></i>
+      </div>
       <button 
         class="btn btn-prev-next"
         tooltip="ANTERIOR"
