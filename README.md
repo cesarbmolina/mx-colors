@@ -23,14 +23,11 @@ App Style Guide para revisar los colores y poder seleccionar su exadecimal cliqu
   "tslib": "^1.10.0",
   "zone.js": "~0.10.2"
 ```
+Run `npm i`
 
-## Development server
-
+## Development server 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
