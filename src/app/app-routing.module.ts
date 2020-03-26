@@ -12,10 +12,6 @@ const routes: Routes = [
     path: 'colors',
     loadChildren: () => import('./pages/colors/colors/colors.module').then(m => m.ColorsModule),
   },
-  {
-    path: 'color-detail',
-    loadChildren: () => import('./pages/colors/color-detail/color-detail.module').then(m => m.ColorDetailModule),
-  },
 ];
 
 @NgModule({

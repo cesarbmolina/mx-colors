@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 // COMPONENTS
 import { ColorsComponent } from './colors.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 const routes: Routes = [{ path: '', component: ColorsComponent }];
 
@@ -15,7 +16,8 @@ const routes: Routes = [{ path: '', component: ColorsComponent }];
   declarations: [ColorsComponent],
   imports: [
     RouterModule.forChild(routes),
-    CommonModule
+    CommonModule,
+    SharedModule,
   ],
   providers: []
 })
