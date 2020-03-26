@@ -1,0 +1,60 @@
+:host {
+  .color-box {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba($color: #000000, $alpha: 0.1);
+    transition: all 0.5s;
+    position: relative;
+
+    .icon-hover {
+      opacity: 0;
+      transition: all 0.5s;
+      background-color: #f1f1f1;
+      border-radius: 50%;
+      padding: 10px 12px;
+      position: absolute;
+      right: 8px;
+      top: 8px;
+      font-size: 16px !important; // TODO
+    }
+
+    &:hover {
+      box-shadow: 0 4px 6px rgba($color: #000000, $alpha: 0.2);
+
+      .icon-hover {
+        opacity: 1;
+      }
+    }
+
+    div {
+      font-size: 11px;
+    }
+
+    .color-title {
+      font-weight: 700;
+      text-transform: capitalize;
+      font-size: 14px;
+    }
+
+    .is-copied {
+      background-color: rgba($color: #000000, $alpha: .8);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      opacity: 0;
+      transition: all 1s;
+    }
+
+    .is-copied-active {
+      opacity: 1;
+    }
+  }
+}

@@ -1,1 +1,38 @@
-<p>colors works!</p>
+<div class="container">
+  <div class="title-section d-flex justify-content-between">
+    <h3 class="title-3">Colores</h3>
+    <div class="d-flex align-items-center">
+      <div class="loading" *ngIf="isLoading">
+        <i class="icon-loop2"></i>
+      </div>
+      <button 
+        class="btn btn-prev-next"
+        tooltip="ANTERIOR"
+        (click)="prevPage()" 
+        [disabled]="page === 1">
+        <i class="icon-chevron-left"></i>
+      </button>
+      <div class="num-page">
+        {{page}} / {{totalPages}}
+      </div>
+      <button 
+        class="btn btn-prev-next"
+        tooltip="SIGUIENTE"
+        (click)="nextPage()" 
+        [disabled]="isTotalPages">
+        <i class="icon-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+  <div class="d-flex flex-column flex-md-row flex-wrap justify-content-center mb-4">
+    <app-color-details
+      class="color-content"
+      *ngFor="let color of arrayColors"
+      [name]="color.name"
+      [year]="color.year"
+      [color]="color.color"
+      [pantoneValue]="color.pantone_value"
+    ></app-color-details>
+  </div>
+
+</div>

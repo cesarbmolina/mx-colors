@@ -1,0 +1,23 @@
+<div 
+  (click)="copyColor(colorValue)"
+  class="mr-3 mb-3 color-box" 
+  [ngStyle]="{'border-left': '10px solid' + color }">
+  <div class="icon-hover">
+    <i class="icon-copy"></i>
+  </div>
+  <div class="is-copied" [class.is-copied-active]="isCopied">
+    ¡Copiado!
+  </div>
+  <div class="">
+    {{ year || 'year' }}
+  </div>
+  <div class="color-title text-center">
+    {{ name || 'name' }}
+  </div>
+  <div #colorValue class="text-center">
+    {{ color || 'color' }}
+  </div>
+  <div class="text-right">
+    {{ pantoneValue || 'pantoneValue' }}
+  </div>
+</div>
